@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grade 9 English Lessons</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.45;
+      padding-bottom: 32px;
+    }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #1b2a4a;
+      color: #ffffff;
+      padding: 16px 16px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .topbar h1 {
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .topbar p {
+      font-size: 12px;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+    .search-wrap {
+      padding: 12px 16px 8px;
+      background: #f8fafc;
+    }
+    .search-input {
+      width: 100%;
+      padding: 11px 14px;
+      font-size: 14px;
+      background: #ffffff;
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: #1b2a4a;
+    }
+    .count-row {
+      padding: 4px 16px 10px;
+      font-size: 12px;
+      color: #64748b;
+    }
+    .lesson-list {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .lesson-card {
+      display: block;
+      text-decoration: none;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: inherit;
+      transition: border-color 0.15s ease, transform 0.12s ease;
+    }
+    .lesson-card:active {
+      transform: scale(0.99);
+      border-color: #1b2a4a;
+    }
+    .lesson-meta {
+      font-size: 11px;
+      font-weight: 600;
+      color: #1b7a3d;
+      margin-bottom: 4px;
+    }
+    .lesson-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 3px;
+    }
+    .lesson-file {
+      font-size: 11px;
+      color: #64748b;
+      font-family: ui-monospace, SFMono-Regular, monospace;
+      word-break: break-all;
+    }
+    .empty {
+      display: none;
+      text-align: center;
+      padding: 32px 16px;
+      font-size: 13px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <h1>Grade 9 English Lessons</h1>
+    <p>38 interactive lessons · Offline ready</p>
+  </header>
+
+  <div class="search-wrap">
+    <input id="searchBox" class="search-input" type="search" placeholder="Search unit, lesson title, or quiz..." />
+  </div>
+
+  <div class="count-row" id="countRow">Showing 38 of 38 lessons</div>
+
+  <main class="lesson-list" id="lessonList">
+      <a class="lesson-card" href="U1-B-Stopping_by_Woods_Interactive.html" data-unit="1" data-search="stopping by woods on a snowy evening unit 1 · part b u1-b-stopping_by_woods_interactive.html">
+        <div class="lesson-meta">Unit 1 · Part B</div>
+        <div class="lesson-title">Stopping by Woods on a Snowy Evening</div>
+        <div class="lesson-file">U1-B-Stopping_by_Woods_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U2-A-Telihealth.html" data-unit="2" data-search="the acceleration behind telehealth services – grade 9 english notes unit 2 · part a u2-a-telihealth.html">
+        <div class="lesson-meta">Unit 2 · Part A</div>
+        <div class="lesson-title">The Acceleration behind Telehealth Services – Grade 9 English Notes</div>
+        <div class="lesson-file">U2-A-Telihealth.html</div>
+      </a>
+      <a class="lesson-card" href="U2-B-healthIsWealthNotes.html" data-unit="2" data-search="grade 9 english notes – health is wealth unit 2 · part b u2-b-healthiswealthnotes.html">
+        <div class="lesson-meta">Unit 2 · Part B</div>
+        <div class="lesson-title">Grade 9 English Notes – Health is Wealth</div>
+        <div class="lesson-file">U2-B-healthIsWealthNotes.html</div>
+      </a>
+      <a class="lesson-card" href="U3-A-Thomas_and_Jerry_Interactive.html" data-unit="3" data-search="thomas and jerry – grade 9 english notes unit 3 · part a u3-a-thomas_and_jerry_interactive.html">
+        <div class="lesson-meta">Unit 3 · Part A</div>
+        <div class="lesson-title">Thomas and Jerry – Grade 9 English Notes</div>
+        <div class="lesson-file">U3-A-Thomas_and_Jerry_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U3-B-Dance-interactive.html" data-unit="3" data-search="dance – grade 9 english unit 3 unit 3 · part b u3-b-dance-interactive.html">
+        <div class="lesson-meta">Unit 3 · Part B</div>
+        <div class="lesson-title">Dance – Grade 9 English Unit 3</div>
+        <div class="lesson-file">U3-B-Dance-interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U4-A-DEAth-is-Fiction-interactive.html" data-unit="4" data-search="death is a fiction – grade 9 english unit 4 unit 4 · part a u4-a-death-is-fiction-interactive.html">
+        <div class="lesson-meta">Unit 4 · Part A</div>
+        <div class="lesson-title">Death is a Fiction – Grade 9 English Unit 4</div>
+        <div class="lesson-file">U4-A-DEAth-is-Fiction-interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U4B-Crossing_the_Bar_Interactive.html" data-unit="4" data-search="grade 9 english – unit 4: crossing the bar (poem) unit 4 · part b u4b-crossing_the_bar_interactive.html">
+        <div class="lesson-meta">Unit 4 · Part B</div>
+        <div class="lesson-title">Grade 9 English – Unit 4: Crossing the Bar (Poem)</div>
+        <div class="lesson-file">U4B-Crossing_the_Bar_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U5-A-Why-i-am-sorry-Full.html" data-unit="5" data-search="unit 5: why 'i'm sorry' doesn't always translate unit 5 · part a u5-a-why-i-am-sorry-full.html">
+        <div class="lesson-meta">Unit 5 · Part A</div>
+        <div class="lesson-title">Unit 5: Why 'I'm Sorry' Doesn't Always Translate</div>
+        <div class="lesson-file">U5-A-Why-i-am-sorry-Full.html</div>
+      </a>
+      <a class="lesson-card" href="U5A-ForWhyIamSorry.html" data-unit="5" data-search="vocabulary flashcards - unit 5 unit 5 · part a u5a-forwhyiamsorry.html">
+        <div class="lesson-meta">Unit 5 · Part A</div>
+        <div class="lesson-title">Vocabulary Flashcards - Unit 5</div>
+        <div class="lesson-file">U5A-ForWhyIamSorry.html</div>
+      </a>
+      <a class="lesson-card" href="U7-B-The_Resistant_Moths_Interactive.html" data-unit="7" data-search="grade 9 english – unit 7: the resistant moths unit 7 · part b u7-b-the_resistant_moths_interactive.html">
+        <div class="lesson-meta">Unit 7 · Part B</div>
+        <div class="lesson-title">Grade 9 English – Unit 7: The Resistant Moths</div>
+        <div class="lesson-file">U7-B-The_Resistant_Moths_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U8-A-humainod-Robert.html" data-unit="8" data-search="humanoid robot sophia – grade 9 english notes unit 8 · part a u8-a-humainod-robert.html">
+        <div class="lesson-meta">Unit 8 · Part A</div>
+        <div class="lesson-title">Humanoid Robot Sophia – Grade 9 English Notes</div>
+        <div class="lesson-file">U8-A-humainod-Robert.html</div>
+      </a>
+      <a class="lesson-card" href="U8A-Humanod-Robert-Sophia.html" data-unit="8" data-search="humanoid robot sophia – grade 9 english notes unit 8 · part a u8a-humanod-robert-sophia.html">
+        <div class="lesson-meta">Unit 8 · Part A</div>
+        <div class="lesson-title">Humanoid Robot Sophia – Grade 9 English Notes</div>
+        <div class="lesson-file">U8A-Humanod-Robert-Sophia.html</div>
+      </a>
+      <a class="lesson-card" href="U8B-Alternative_Source_of_Energy_Interactive.html" data-unit="8" data-search="grade 9 english – unit 8: the alternative source of energy unit 8 · part b u8b-alternative_source_of_energy_interactive.html">
+        <div class="lesson-meta">Unit 8 · Part B</div>
+        <div class="lesson-title">Grade 9 English – Unit 8: The Alternative Source of Energy</div>
+        <div class="lesson-file">U8B-Alternative_Source_of_Energy_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U8B-Alternative-Source-of-energy.html" data-unit="8" data-search="grade 9 english – the alternative energy sources unit 8 · part b u8b-alternative-source-of-energy.html">
+        <div class="lesson-meta">Unit 8 · Part B</div>
+        <div class="lesson-title">Grade 9 English – The Alternative Energy Sources</div>
+        <div class="lesson-file">U8B-Alternative-Source-of-energy.html</div>
+      </a>
+      <a class="lesson-card" href="U9-B-Leisure_Poem_Interactive.html" data-unit="9" data-search="grade 9 english – unit 9: leisure (poem) unit 9 · part b u9-b-leisure_poem_interactive.html">
+        <div class="lesson-meta">Unit 9 · Part B</div>
+        <div class="lesson-title">Grade 9 English – Unit 9: Leisure (Poem)</div>
+        <div class="lesson-file">U9-B-Leisure_Poem_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U9-B-Leisure-Poem.html" data-unit="9" data-search="leisure – grade 9 english unit 9 unit 9 · part b u9-b-leisure-poem.html">
+        <div class="lesson-meta">Unit 9 · Part B</div>
+        <div class="lesson-title">Leisure – Grade 9 English Unit 9</div>
+        <div class="lesson-file">U9-B-Leisure-Poem.html</div>
+      </a>
+      <a class="lesson-card" href="U10%20A-A-message-from-Another-planet.html" data-unit="10" data-search="a message from another planet – grade 9 english notes unit 10 · part a u10 a-a-message-from-another-planet.html">
+        <div class="lesson-meta">Unit 10 · Part A</div>
+        <div class="lesson-title">A Message from Another Planet – Grade 9 English Notes</div>
+        <div class="lesson-file">U10 A-A-message-from-Another-planet.html</div>
+      </a>
+      <a class="lesson-card" href="U10-A-A-message-from-anotherPlanet_DeepsikInteractive.html" data-unit="10" data-search="a message from another planet — grade 9 english unit 10 unit 10 · part a u10-a-a-message-from-anotherplanet_deepsikinteractive.html">
+        <div class="lesson-meta">Unit 10 · Part A</div>
+        <div class="lesson-title">A Message from Another Planet — Grade 9 English Unit 10</div>
+        <div class="lesson-file">U10-A-A-message-from-anotherPlanet_DeepsikInteractive.html</div>
+      </a>
+      <a class="lesson-card" href="U10-B%20Up_Hill_Poem_Interactive.html" data-unit="10" data-search="up-hill — christina rossetti | grade 9 english unit 10 unit 10 · part b u10-b up_hill_poem_interactive.html">
+        <div class="lesson-meta">Unit 10 · Part B</div>
+        <div class="lesson-title">Up-Hill — Christina Rossetti | Grade 9 English Unit 10</div>
+        <div class="lesson-file">U10-B Up_Hill_Poem_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U11-A-Smart-Phone.html" data-unit="11" data-search="grade 9 english - unit 11: save your smartphone unit 11 · part a u11-a-smart-phone.html">
+        <div class="lesson-meta">Unit 11 · Part A</div>
+        <div class="lesson-title">Grade 9 English - Unit 11: Save Your Smartphone</div>
+        <div class="lesson-file">U11-A-Smart-Phone.html</div>
+      </a>
+      <a class="lesson-card" href="U11-B-Weather_Instruments_Interactive.html" data-unit="11" data-search="weather instruments — grade 9 english unit 11 unit 11 · part b u11-b-weather_instruments_interactive.html">
+        <div class="lesson-meta">Unit 11 · Part B</div>
+        <div class="lesson-title">Weather Instruments — Grade 9 English Unit 11</div>
+        <div class="lesson-file">U11-B-Weather_Instruments_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U12-A-Paulo_Coelho_Interactive.html" data-unit="12" data-search="paulo coelho — grade 9 english unit 12 unit 12 · part a u12-a-paulo_coelho_interactive.html">
+        <div class="lesson-meta">Unit 12 · Part A</div>
+        <div class="lesson-title">Paulo Coelho — Grade 9 English Unit 12</div>
+        <div class="lesson-file">U12-A-Paulo_Coelho_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U12-B-Madam_and_Her_Madam_Interactive.html" data-unit="12" data-search="madam and her madam — langston hughes | grade 9 english unit 12 unit 12 · part b u12-b-madam_and_her_madam_interactive.html">
+        <div class="lesson-meta">Unit 12 · Part B</div>
+        <div class="lesson-title">Madam and Her Madam — Langston Hughes | Grade 9 English Unit 12</div>
+        <div class="lesson-file">U12-B-Madam_and_Her_Madam_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="Unit-12-Paulo-Wordmeaning-Quiz-25.html" data-unit="12" data-search="paulo coelho – 25 vocabulary mcqs unit 12 unit-12-paulo-wordmeaning-quiz-25.html">
+        <div class="lesson-meta">Unit 12</div>
+        <div class="lesson-title">Paulo Coelho – 25 Vocabulary MCQs</div>
+        <div class="lesson-file">Unit-12-Paulo-Wordmeaning-Quiz-25.html</div>
+      </a>
+      <a class="lesson-card" href="Unit-12-REading%20A-Paulo-40mcqs.html" data-unit="12" data-search="paulo coelho – 40 mcqs unit 12 unit-12-reading a-paulo-40mcqs.html">
+        <div class="lesson-meta">Unit 12</div>
+        <div class="lesson-title">Paulo Coelho – 40 MCQs</div>
+        <div class="lesson-file">Unit-12-REading A-Paulo-40mcqs.html</div>
+      </a>
+      <a class="lesson-card" href="U13-A-ADBI_Interactive.html" data-unit="13" data-search="asian development bank institute (adbi) — grade 9 english unit 13 unit 13 · part a u13-a-adbi_interactive.html">
+        <div class="lesson-meta">Unit 13 · Part A</div>
+        <div class="lesson-title">Asian Development Bank Institute (ADBI) — Grade 9 English Unit 13</div>
+        <div class="lesson-file">U13-A-ADBI_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U13-B%20A_Message_of_Congratulations_Interactive.html" data-unit="13" data-search="a message of congratulations – grade 9 english notes unit 13 · part b u13-b a_message_of_congratulations_interactive.html">
+        <div class="lesson-meta">Unit 13 · Part B</div>
+        <div class="lesson-title">A Message of Congratulations – Grade 9 English Notes</div>
+        <div class="lesson-file">U13-B A_Message_of_Congratulations_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U14-A-The_Maya_Empire_Interactive.html" data-unit="14" data-search="the maya empire — grade 9 english unit 14 unit 14 · part a u14-a-the_maya_empire_interactive.html">
+        <div class="lesson-meta">Unit 14 · Part A</div>
+        <div class="lesson-title">The Maya Empire — Grade 9 English Unit 14</div>
+        <div class="lesson-file">U14-A-The_Maya_Empire_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U14-B-THE-HISTORY-OF-MONEY.html" data-unit="14" data-search="the history of money – grade 9 english unit 14 unit 14 · part b u14-b-the-history-of-money.html">
+        <div class="lesson-meta">Unit 14 · Part B</div>
+        <div class="lesson-title">The History of Money – Grade 9 English Unit 14</div>
+        <div class="lesson-file">U14-B-THE-HISTORY-OF-MONEY.html</div>
+      </a>
+      <a class="lesson-card" href="U15-A-DIARY-OF-A-YOUNG-GIRL.html" data-unit="15" data-search="the diary of a young girl – grade 9 english unit 15 unit 15 · part a u15-a-diary-of-a-young-girl.html">
+        <div class="lesson-meta">Unit 15 · Part A</div>
+        <div class="lesson-title">The Diary of a Young Girl – Grade 9 English Unit 15</div>
+        <div class="lesson-file">U15-A-DIARY-OF-A-YOUNG-GIRL.html</div>
+      </a>
+      <a class="lesson-card" href="U15-B%20The_Rautes_InteractiveM1%20.html" data-unit="15" data-search="the rautes — grade 9 english unit 15 unit 15 · part b u15-b the_rautes_interactivem1 .html">
+        <div class="lesson-meta">Unit 15 · Part B</div>
+        <div class="lesson-title">The Rautes — Grade 9 English Unit 15</div>
+        <div class="lesson-file">U15-B The_Rautes_InteractiveM1 .html</div>
+      </a>
+      <a class="lesson-card" href="U15-B-The_Rautes_InteractiveM2.html" data-unit="15" data-search="the rautes — grade 9 english unit 15 unit 15 · part b u15-b-the_rautes_interactivem2.html">
+        <div class="lesson-meta">Unit 15 · Part B</div>
+        <div class="lesson-title">The Rautes — Grade 9 English Unit 15</div>
+        <div class="lesson-file">U15-B-The_Rautes_InteractiveM2.html</div>
+      </a>
+      <a class="lesson-card" href="U16-A-wimboldan-interactive.html" data-unit="16" data-search="wimbledon – grade 9 english unit 16 unit 16 · part a u16-a-wimboldan-interactive.html">
+        <div class="lesson-meta">Unit 16 · Part A</div>
+        <div class="lesson-title">Wimbledon – Grade 9 English Unit 16</div>
+        <div class="lesson-file">U16-A-wimboldan-interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U16-B-SPORTS-INTERACTIVE-dEPP.html" data-unit="16" data-search="sports – grade 9 english unit 16 unit 16 · part b u16-b-sports-interactive-depp.html">
+        <div class="lesson-meta">Unit 16 · Part B</div>
+        <div class="lesson-title">Sports – Grade 9 English Unit 16</div>
+        <div class="lesson-file">U16-B-SPORTS-INTERACTIVE-dEPP.html</div>
+      </a>
+      <a class="lesson-card" href="U17-A-Chasing_Ice_Interactive.html" data-unit="17" data-search="u17 – movie review: 'chasing ice' | grade 9 english unit 17 · part a u17-a-chasing_ice_interactive.html">
+        <div class="lesson-meta">Unit 17 · Part A</div>
+        <div class="lesson-title">U17 – Movie Review: 'Chasing Ice' | Grade 9 English</div>
+        <div class="lesson-file">U17-A-Chasing_Ice_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U17B-A_Noisy_Party_Interactive.html" data-unit="17" data-search="a noisy party — grade 9 english unit 17 unit 17 · part b u17b-a_noisy_party_interactive.html">
+        <div class="lesson-meta">Unit 17 · Part B</div>
+        <div class="lesson-title">A Noisy Party — Grade 9 English Unit 17</div>
+        <div class="lesson-file">U17B-A_Noisy_Party_Interactive.html</div>
+      </a>
+      <a class="lesson-card" href="U18A-WRIGHT-BROTHERS-INTERACTIVE-DEEPSIK.html" data-unit="18" data-search="wright brothers – grade 9 english unit 18a unit 18 · part a u18a-wright-brothers-interactive-deepsik.html">
+        <div class="lesson-meta">Unit 18 · Part A</div>
+        <div class="lesson-title">Wright Brothers – Grade 9 English Unit 18A</div>
+        <div class="lesson-file">U18A-WRIGHT-BROTHERS-INTERACTIVE-DEEPSIK.html</div>
+      </a>
+      <a class="lesson-card" href="U18B-Rickshaw_Ride_Interactive.html" data-unit="18" data-search="rickshaw ride — grade 9 english unit 18 unit 18 · part b u18b-rickshaw_ride_interactive.html">
+        <div class="lesson-meta">Unit 18 · Part B</div>
+        <div class="lesson-title">Rickshaw Ride — Grade 9 English Unit 18</div>
+        <div class="lesson-file">U18B-Rickshaw_Ride_Interactive.html</div>
+      </a>
+  </main>
+
+  <div class="empty" id="emptyState">No lessons matched your search.</div>
+
+  <script>
+    (function () {
+      var input = document.getElementById('searchBox');
+      var cards = Array.prototype.slice.call(document.querySelectorAll('.lesson-card'));
+      var countRow = document.getElementById('countRow');
+      var emptyState = document.getElementById('emptyState');
+
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var visible = 0;
+        cards.forEach(function (card) {
+          var hay = card.getAttribute('data-search') || '';
+          var match = !q || hay.indexOf(q) !== -1;
+          card.style.display = match ? 'block' : 'none';
+          if (match) visible += 1;
+        });
+        countRow.textContent = 'Showing ' + visible + ' of ' + cards.length + ' lessons';
+        emptyState.style.display = visible === 0 ? 'block' : 'none';
+      });
+    })();
+  </script>
+</body>
+</html>
